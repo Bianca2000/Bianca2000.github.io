@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://polarcave.netlify.app/"
 languageCode = "en-us"
 title = "Archie"
 theme="archie"

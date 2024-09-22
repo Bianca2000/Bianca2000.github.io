@@ -1,4 +1,4 @@
-baseURL = "http://Bianca2000.github.com/hugo_blog"
+baseURL = "https://polarcave.netlify.app/"
 languageCode = "zh-tw"
 title = "Polar Bear Cave"
 theme = "archie"
