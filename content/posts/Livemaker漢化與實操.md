@@ -73,7 +73,6 @@ lmlsb insertmenu --encoding=utf-8-sig 000000XX.lsb 000000XX.csv
 | 你    |      祢      |
 | 啊    |      阿      |
 
-
 ## 替換字典
 因為Livemaker一定要用日文系統跟系統預設的日文字體(msgothic)，所以造成非常多崩潰的現象
 感謝諸位大佬發明出了更替字型的方法，方便我們後人
