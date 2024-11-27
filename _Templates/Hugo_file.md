@@ -1,9 +1,9 @@
----
-title: {{NAME}}
-tags: [{{VALUE:tag？}}]
-date: {{DATE:YYYY-MM-DD HH:mm:ss}}
++++
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = {{ .Date }}
+draft = true
 description: 
 tldr: 
-draft: true
+draft: false
 feature:
----
++++

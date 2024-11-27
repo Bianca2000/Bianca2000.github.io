@@ -167,10 +167,10 @@
   "lastOpenFiles": [
     "content/posts/first-post.md",
     "content/posts/Livemaker漢化與實操.md",
+    "_Templates/Hugo_file.md",
+    "archetypes/default.md",
     "content/posts/tag change.md",
     "content/posts/Hugo with Obsidian.md",
-    "archetypes/default.md",
-    "_Templates/Hugo_file.md",
     "Welcome.md",
     "archetypes",
     "hugo.toml",
