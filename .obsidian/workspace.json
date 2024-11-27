@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Templates/Hugo_file.md",
-                "mode": "preview",
+                "file": "content/posts/Livemaker漢化與實操.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Hugo_file"
+              "title": "Livemaker漢化與實操"
             }
           }
         ]
@@ -165,10 +165,10 @@
   },
   "active": "7783e60ce09d6335",
   "lastOpenFiles": [
+    "_Templates/Hugo_file.md",
+    "content/posts/Livemaker漢化與實操.md",
     "content/posts/first-post.md",
     "content/posts/閱讀筆記.md",
-    "content/posts/Livemaker漢化與實操.md",
-    "_Templates/Hugo_file.md",
     "archetypes/default.md",
     "content/posts/Livemaker package.md",
     "content/posts/tag change.md",
