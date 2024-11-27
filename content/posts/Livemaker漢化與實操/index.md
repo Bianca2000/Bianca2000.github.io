@@ -15,7 +15,6 @@ pip install pylivemaker
 ```
 安裝後你可以去它的[文檔](https://pylivemaker.readthedocs.io/en/latest/usage.html)看，有非常細緻的解釋一些常規操作
 
-
 ## 解包Livemaker
 ### GARbro
 GARbro使用上非常簡單，你只需要把你把你資料夾底下最大的遊戲檔(ex:game.dat 或 game.exe)丟進去，就能看到一堆0000xxxlsb和是日文的...作成lsb
@@ -57,7 +56,6 @@ lmlsb edit  ■初期化.lsb 66
 <Item Command="Calc" LineNo="66" Indent="0" Mute="0" NotUpdate="1" Color="0">
       <Calc>StringToArray("隱藏文字,劇情回顧,跳過已讀文本,自動文本推進,保存,讀取,選項,自動跳過已讀文本,文本速度...,自動文本推進時間設定...,字體選擇...,播放聲音,音量調節...,背景音樂,音效,台詞,MIDI輸出端口選擇...,全屏,顯示模式...,結束遊戲,返回標題畫面,退出", システムメニュー項目名, ",")</Calc>
 ```
-
 ### 遊戲選項
 
 遊戲選單真的不能用簡體字，直說吧，選項只能用日本字體的漢字跟繁體
@@ -69,9 +67,9 @@ lmlsb insertmenu --encoding=utf-8-sig 000000XX.lsb 000000XX.csv
 ```
 
 | 簡/繁 | 日文漢字替代 |
-| ----- | :----------: |
-| 你    |      祢      |
-| 啊    |      阿      |
+| --- | :----: |
+| 你   |   祢    |
+| 啊   |   阿    |
 
 ## 替換字典
 因為Livemaker一定要用日文系統跟系統預設的日文字體(msgothic)，所以造成非常多崩潰的現象
