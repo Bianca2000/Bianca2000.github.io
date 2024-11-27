@@ -183,8 +183,9 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "507ce4487f377ebb",
+  "active": "d42d6c3548d10895",
   "lastOpenFiles": [
+    "Welcome.md",
     "_Templates/Hugo_file.md",
     "archetypes/default.md",
     "archetypes",
@@ -224,7 +225,6 @@
     "themes/archie/static/favicon-32x32.png",
     "themes/archie/archetypes/default.md",
     "themes/archie/README.md",
-    "content/posts/first-post.md",
-    "Welcome.md"
+    "content/posts/first-post.md"
   ]
 }
