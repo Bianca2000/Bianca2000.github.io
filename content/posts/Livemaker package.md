@@ -1,7 +1,7 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
-tags: [{{VALUE:tag？}}]
+tags: [pylivemaker]
 description: 
 tldr: 
 draft: false
