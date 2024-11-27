@@ -13,32 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Templates/Hugo_file.md",
+                "file": "content/posts/first-post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hugo_file"
-            }
-          }
-        ]
-      },
-      {
-        "id": "4e0aaca7b5dc51ee",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "aa630d21f915aaed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Templates/Hugo_file.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hugo_file"
+              "title": "first-post"
             }
           }
         ]
@@ -183,10 +163,10 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "aa630d21f915aaed",
+  "active": "d42d6c3548d10895",
   "lastOpenFiles": [
-    "Welcome.md",
     "_Templates/Hugo_file.md",
+    "Welcome.md",
     "archetypes/default.md",
     "archetypes",
     "hugo.toml",

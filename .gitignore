@@ -1,2 +1,4 @@
 *.log
 public/
+.obsidian/
+_Templates/
