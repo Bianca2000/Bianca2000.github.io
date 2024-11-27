@@ -1,11 +1,9 @@
-```
 ---
 title: {{NAME}}
-description:
-date: {{DATE:YYYY-MM-DD HH:mm:ss}}
-tldr: (optional)
-draft: true
 tags: [{{VALUE:tag？}}]
-toc: true
+date: {{DATE:YYYY-MM-DD HH:mm:ss}}
+description:
+tldr: 
+draft: true
+feature: 
 ---
-```
