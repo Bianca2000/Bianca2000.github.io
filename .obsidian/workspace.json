@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "archetypes/default.md",
-                "mode": "source",
-                "source": false
+                "file": "_Templates/Hugo_file.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "default"
+              "title": "Hugo_file"
             }
           }
         ]
@@ -165,10 +165,11 @@
   },
   "active": "7783e60ce09d6335",
   "lastOpenFiles": [
+    "content/posts/first-post.md",
+    "content/posts/閱讀筆記.md",
+    "content/posts/Livemaker漢化與實操.md",
     "_Templates/Hugo_file.md",
     "archetypes/default.md",
-    "content/posts/Livemaker漢化與實操.md",
-    "content/posts/first-post.md",
     "content/posts/Livemaker package.md",
     "content/posts/tag change.md",
     "content/posts/Hugo with Obsidian.md",
