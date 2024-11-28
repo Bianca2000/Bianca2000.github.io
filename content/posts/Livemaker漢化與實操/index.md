@@ -6,8 +6,9 @@ tags: ['Livemaker']
 draft: false
 toc: true
 ---
->  近期連續接觸了挺多Livemaker遊戲，趁著記憶還新鮮，趕緊紀錄一下
->  基本上參考了[漢化黑礁2、3的](https://github.com/CyanidEEEEE/Livemaker-chinese-tl)大佬以及[M系鏡像](https://mirror.chromaso.net/thread/55682)的帖子所以基礎的其實看上面大佬說的，我就記錄一下遇到的痛點
+>  近期連續接觸了挺多Livemaker遊戲，趁著記憶還新鮮，趕緊紀錄一下  
+>  基本上參考了[漢化黑礁2、3的](https://github.com/CyanidEEEEE/Livemaker-chinese-tl)大佬以及[M系鏡像](https://mirror.chromaso.net/thread/55682)的帖子  
+>  所以基礎的其實看上面大佬說的，我就記錄一下遇到的痛點
 ## 安裝pylivemaker
 ```
 pip install pylivemaker
