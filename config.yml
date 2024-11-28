@@ -1,0 +1,100 @@
+baseURL: "https://polarcave.netlify.app/"
+title: Polar Bear Cave
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+languageCode: zh_tw
+defaultContentLanguage: zh_tw
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Polar Bear Cave
+  description: "Nothing at all."
+  keywords: [Blog, PaperMod]
+  author: polarbear
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2006-01-02"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  ShowCodeCopyButtons: true # 複製代碼
+  showtoc: true # 目錄
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  
+# assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    #favicon: "<link / abs url>"
+    #favicon16x16: "<link / abs url>"
+    #favicon32x32: "<link / abs url>"
+    #apple_touch_icon: "<link / abs url>"
+    #safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Polar Bear"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: Polar Bear Cave
+    subtitle: "Bear"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "撕咬的殘餘物"
+    Content: Just Nothing
+
+#   socialIcons:
+#     - name: github
+#       url: "https://github.com/"
+
+  #   analytics:
+   #    google:
+   #    SiteVerificationTag: "XYZabc"
+   #    bing:
+  #       SiteVerificationTag: "XYZabc"
+  #     yandex:
+  #       SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+menu:
+  main:
+    - identifier: archives
+      name: 歸檔
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: 標籤
+      url: /tags/
+      weight: 30
+    - identifier: daily 
+      name: 日誌
+      url: /posts/daily/
+      weight: 40

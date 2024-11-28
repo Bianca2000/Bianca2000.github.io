@@ -5,7 +5,9 @@ description: Livemaker漢化紀錄
 tags:
   - Livemaker
 draft: false
-toc: true
+showToc: true
+TocOpen: true
+UseHugoToc: true
 ---
 >  近期連續接觸了挺多Livemaker遊戲，趁著記憶還新鮮，趕緊紀錄一下  
 >  基本上參考了[漢化黑礁2、3的](https://github.com/CyanidEEEEE/Livemaker-chinese-tl)大佬以及[M系鏡像](https://mirror.chromaso.net/thread/55682)的帖子  
