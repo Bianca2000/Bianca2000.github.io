@@ -1,10 +1,12 @@
 ---
-title: "Livemaker漢化與實操"
+title: Livemaker漢化與實操
 date: 2024-11-27T19:29:11+08:00
 description: ""
-tags: ['Livemaker']
+tags:
+  - Livemaker
 draft: false
 toc: true
+tldr:
 ---
 >  近期連續接觸了挺多Livemaker遊戲，趁著記憶還新鮮，趕緊紀錄一下  
 >  基本上參考了[漢化黑礁2、3的](https://github.com/CyanidEEEEE/Livemaker-chinese-tl)大佬以及[M系鏡像](https://mirror.chromaso.net/thread/55682)的帖子  
