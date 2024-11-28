@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "aa7f95261a392366",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0b5a228d3612efa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9993d175cb2c8fd9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/Livemaker漢化與實操/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ab3de55c7120b126",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa01e3d746010b55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fb77cb5f796821b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "7fa0a26b8dbab987",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "c55335ac8bc68b74",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "649120fd6cf61a6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "1403e04cd4a14e21",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc1c6a6f966cd331",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/posts/hugo-server/hugo-server.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "hugo-server 的反向連結"
+            }
+          },
+          {
+            "id": "4922a0bfb55fee71",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/posts/hugo-server/hugo-server.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "hugo-server 的對外連結"
+            }
+          },
+          {
+            "id": "245d4ef6d59934e9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "4eae2f4052863462",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/posts/hugo-server/hugo-server.md"
+              },
+              "icon": "lucide-list",
+              "title": "hugo-server 的大綱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "9993d175cb2c8fd9",
+  "lastOpenFiles": [
+    "content/posts/first-post.md",
+    "content/posts/Hugo 自定義更改紀錄/index.md",
+    "content/posts/Livemaker漢化與實操/index.md",
+    "public/tags/hugo/index.xml",
+    "public/tags/hugo/index.html",
+    "public/tags/hugo",
+    "public/posts/hugo-自定義更改紀錄/index.html",
+    "public/posts/hugo-自定義更改紀錄",
+    "content/posts/Livemaker漢化與實操/image/fontname.png",
+    "content/posts/Livemaker漢化與實操/image/T++_plugin.png",
+    "content/posts/hugo-server/hugo-server.md",
+    "content/posts/Hugo 自定義更改紀錄",
+    "public/posts/livemaker漢化與實操/livemaker漢化與實操/index.html",
+    "public/posts/livemaker漢化與實操/livemaker漢化與實操",
+    "public/posts/livemaker漢化與實操/image/T++_plugin.png",
+    "public/posts/livemaker漢化與實操/image/fontname.png",
+    "public/posts/livemaker漢化與實操/image",
+    "content/posts/Livemaker漢化與實操/Livemaker漢化與實操.md",
+    "content/posts/Livemaker漢化與實操",
+    "_Templates/Hugo_file.md"
+  ]
+}
