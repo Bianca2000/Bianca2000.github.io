@@ -58,7 +58,7 @@ lmlsb edit  ■初期化.lsb 66
 ```
 ### 遊戲選項
 
-遊戲選單真的不能用簡體字，直說吧，選項只能用日本字體的漢字跟繁體
+遊戲選單真的不能用簡體字，直說吧，選項只能用日本字體的漢字跟繁體。
 我這裡去這兩個網站[字嗨](https://zi-hi.com/sp/jfont/) [JCinfo](https://www.jcinfo.net/zh-hant/tools/kanji)找找看有沒有啥近義的字做為替代，幸好只要找一些就好了，然後用下面命令行導出跟導回去編輯後的目錄，跟extractcsv一樣
 
 ```
@@ -73,9 +73,9 @@ lmlsb insertmenu --encoding=utf-8-sig 000000XX.lsb 000000XX.csv
 
 ## 替換字典
 因為Livemaker一定要用日文系統跟系統預設的日文字體(msgothic)，所以造成非常多崩潰的現象
-感謝諸位大佬發明出了更替字型的方法，方便我們後人
-這部分我踩的坑實在太太太多了，於是要特別說明
-[M系鏡像搞出來的字體工具，但還不懂如何實操](https://github.com/shy2052/fontObfuscator)
+感謝諸位大佬發明出了更替字型的方法，方便我們後人。
+[M系鏡像搞出來的字體工具](https://github.com/shy2052/fontObfuscator)，但還不懂如何實操。
+這部分我踩的坑實在太太太多了，於是要特別說明：
 **如果你對字型完全不熟悉，那就別動任何字體！直接使用別人給的字體和字典來替換就夠了！別自作聰明！
 字體部分，我最後用了別人提供的【MS-Gothic.ttf】字體
 字典使用GalTransl_DumpInjector的
