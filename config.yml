@@ -83,7 +83,7 @@ params:
 menu:
   main:
     - identifier: archives
-      name: 歸檔
+      name: 時間軸
       url: /archives/
       weight: 10
     - identifier: categories
@@ -96,5 +96,5 @@ menu:
       weight: 30
     - identifier: daily 
       name: 日誌
-      url: /posts/daily/
+      url: /daily/
       weight: 40
