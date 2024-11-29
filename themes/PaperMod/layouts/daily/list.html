@@ -1,10 +1,12 @@
 {{- define "main" }}
 {{- $paginator := .Paginate .Pages }}
-{{ $dateformat := .Params.DateFormat | default "2006-01-02 15:04:05" }} <!-- 默認使用 "YYYY-MM-DD HH:mm:ss" 格式 -->
+{{ $dateformat := .Params.DateFormat | default "2006-01-02 15:04:05" }}
 
 <article class="post-single">
     <header class="page-header">
-        <h1>{{- (printf "%s&nbsp;" .Title) | htmlUnescape -}}</h1>
+        <h1>
+            {{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+        </h1>
         {{- if .Description }}
         <div class="post-description">
             {{ .Description }}
@@ -35,17 +37,13 @@
 
                         <div class="pe-moment-bottom">
                             <div class="pe-moment-time">
-                                {{- $momentDate := .Param "date" | default .Date }} <!-- 使用 default .Date，如果 "date" 沒有設定 -->
-                                {{- if $momentDate }}
-                                    <span>{{ $momentDate | time.Format $dateformat }}</span>
-                                {{- else }}
-                                    <span>未設置日期</span>
-                                {{- end }}
+                                {{- $momentDate := .Param "date" | default .Date }} <!-- Use default .Date if "date" is not set -->
+                                <span>{{ $momentDate | time.Format $dateformat }}</span>
                             </div>
 
                             {{ if not .Params.hideComment }}
                             <button class="pe-moment-comment-btn" onclick="showComment(this)" data-slug="{{ $moment.Param "slug" }}">
-                                <!-- 可以在這裡加上評論按鈕 -->
+                                <!-- You can add comment icon or text here -->
                             </button>
                             {{ end }}
                         </div>
