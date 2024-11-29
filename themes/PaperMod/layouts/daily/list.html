@@ -1,55 +1,40 @@
-{{- define "main" }} <!-- 定義一個名為 "main" 的區塊 -->
+{{- define "main" }}
+{{- $paginator := .Paginate .Pages }}
+{{ $dateformat := .Params.DateFormat }}
 
-<!-- 分頁區塊開始 -->
-{{- $paginator := .Paginate .Pages }} <!-- 初始化分頁器 -->
-{{ $dateformat := .Params.DateFormat }} <!-- 設置日期格式變量 -->
-
-<!-- 文章單一內容區塊 -->
-<article class="post-single"> 
-    <!-- 文章頭部 -->
+<article class="post-single">
     <header class="page-header">
         <h1>
-            <!-- 顯示文章標題，並進行HTML解碼處理 -->
             {{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
         </h1>
         {{- if .Description }}
-        <!-- 如果有描述，則顯示描述內容 -->
         <div class="post-description">
             {{ .Description }}
         </div>
         {{- end }}
     </header>
 
-    <!-- 文章內容區域 -->
     <div class="post-content">
-        <!-- 時刻列表 -->
-        <div class="pe-dailys">
+        <div class="pe-moments">
             <ul>
-                <!-- 遍歷分頁中的每一個 daily -->
-                {{- range $daily := $paginator.Pages }}
+                {{- range $moment := $paginator.Pages }}
                 {{- if .Content }}
-                <!-- 如果有內容，顯示每個 daily -->
-                <li class="pe-daily">
-                    <!-- 顯示圖標（固定圖片） -->
+                <li class="pe-moment">
                     <img src="{{ site.Params.label.icon }}" alt="{{ site.Params.author }}">
-                    <div class="pe-daily-body">
-                        <!-- 顯示 daily 的具體內容 -->
-                        <div class="pe-daily-content">
+                    <div class="pe-moment-body">
+                        <div class="pe-moment-content">
                             {{ .Content }}
                         </div>
-                        <!-- 顯示標籤（如果有） -->
                         {{ if .Params.tags }}
-                        <div class="pe-daily-tags">
-                            <!-- 遍歷每個標籤並顯示 -->
+                        <div class="pe-moment-tags">
                             {{- range $index, $tag := (.Params.tags) }}
-                            <span class="pe-daily-tag">{{ $tag }}</span>
+                            <span class="pe-moment-tag">{{ $tag }}</span>
                             {{- end }}
                         </div>
                         {{ end }}
-                        <div class="pe-daily-bottom">
-                            <div class="pe-daily-time">
-                                <!-- 顯示 daily 的時間 -->
-                                <span>{{ $daily.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</span>
+                        <div class="pe-moment-bottom">
+                            <div class="pe-moment-time">
+                                <span>{{ $moment.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</span>
                             </div>
                         </div>
                     </div>
@@ -61,25 +46,20 @@
     </div>
 </article>
 
-<!-- 如果有多於一頁，顯示頁腳區域 -->
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
     <nav class="pagination">
-        <!-- 如果有上一頁，顯示上一頁鏈接 -->
         {{- if $paginator.HasPrev }}
         <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
             {{ i18n "prev_page" }}
-            <!-- 如果需要顯示頁碼，顯示當前頁/總頁數 -->
             {{- if (.Param "ShowPageNums") }}
             {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
             {{- end }}
         </a>
         {{- end }}
-        <!-- 如果有下一頁，顯示下一頁鏈接 -->
         {{- if $paginator.HasNext }}
         <a class="next" href="{{ $paginator.Next.URL | absURL }}">
             {{- i18n "next_page" }}
-            <!-- 如果需要顯示頁碼，顯示當前頁/總頁數 -->
             {{- if (.Param "ShowPageNums") }}
             {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
             {{- end }}
@@ -88,6 +68,4 @@
     </nav>
 </footer>
 {{- end }}
-
-<!-- 結束 "main" 區塊 -->
 {{- end }}
