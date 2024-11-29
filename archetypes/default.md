@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 tags: [{{VALUE:tag？}}]
-date: {{ .Date | time.Format "2006-01-02T15:04:05+08:00" }}
+date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 draft: false
 tags: ["first"]
 author: "polarbear"
