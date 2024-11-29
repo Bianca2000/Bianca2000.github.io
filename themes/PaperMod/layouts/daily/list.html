@@ -1,12 +1,10 @@
-{{ define "main" }}
-{{ $paginator := .Paginate (where .Site.RegularPages "Section" "daily") }}
-{{ $dateformat := .Params.DateFormat }}
+{{- define "main" }}
+{{- $paginator := .Paginate .Pages }}
+{{ $dateformat := .Params.DateFormat | default "2006-01-02 15:04:05" }}
 
 <article class="post-single">
     <header class="page-header">
-        <h1>
-            {{- .Title }}
-        </h1>
+        <h1>{{ .Title }}</h1>
         {{- if .Description }}
         <div class="post-description">
             {{ .Description }}
@@ -17,48 +15,40 @@
     <div class="post-content">
         <div class="pe-moments">
             <ul>
-                {{ range $moment := $paginator.Pages }}
+                {{- range $moment := $paginator.Pages }}
+                {{- if .Content }}
                 <li class="pe-moment">
                     <div class="pe-moment-body">
-                        <h2>
-                            <a href="{{ $moment.RelPermalink }}">{{ $moment.Title }}</a>
-                        </h2>
+                        <h2>{{ $moment.Title }}</h2>
                         <div class="pe-moment-meta">
-                            <time>{{ $moment.Date.Format $dateformat }}</time>
-                            {{ if $moment.Params.tags }}
+                            <time>{{ $moment.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</time>
+                            {{- if $moment.Params.tags }}
                             <div class="pe-moment-tags">
-                                {{ range $moment.Params.tags }}
+                                {{- range $moment.Params.tags }}
                                 <span class="pe-moment-tag">{{ . }}</span>
-                                {{ end }}
+                                {{- end }}
                             </div>
-                            {{ end }}
-                        </div>
-                        <div class="pe-moment-content">
-                            {{ $moment.Summary }}
+                            {{- end }}
                         </div>
                     </div>
                 </li>
-                {{ end }}
+                {{- end }}
+                {{- end }}
             </ul>
         </div>
     </div>
 </article>
 
-{{ if gt $paginator.TotalPages 1 }}
+{{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
     <nav class="pagination">
-        {{ if $paginator.HasPrev }}
-        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-            &laquo; Previous
-        </a>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <a class="next" href="{{ $paginator.Next.URL | absURL }}">
-            Next &raquo;
-        </a>
-        {{ end }}
+        {{- if $paginator.HasPrev }}
+        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">&laquo; Previous</a>
+        {{- end }}
+        {{- if $paginator.HasNext }}
+        <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next &raquo;</a>
+        {{- end }}
     </nav>
 </footer>
-{{ end }}
-
-{{ end }}
+{{- end }}
+{{- end }}
