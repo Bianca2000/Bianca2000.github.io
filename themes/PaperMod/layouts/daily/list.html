@@ -1,52 +1,64 @@
 {{ define "main" }}
-<article>
-  <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">{{ .Description }}</div>
-    {{- end }}
-  </header>
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "daily") }}
+{{ $dateformat := .Params.DateFormat }}
 
-  <div class="post-content">
-    <div class="pe-moments">
-      <ul>
-        {{ $paginator := .Paginate .Pages }} <!-- 设置分页 -->
-        {{ range $moment := $paginator.Pages }}
-        <li class="pe-moment">
-          {{- if .Content }}
-          <img src="{{ site.Params.label.icon }}" alt="{{ site.Params.author }}">
-          <div class="pe-moment-body">
-            <div class="pe-moment-content">
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              <p>{{ .Date.Format "2006-01-02 15:04" }}</p> <!-- 日期格式 -->
-              {{ .Content }}
-            </div>
-            {{ if .Params.tags }}
-            <div class="pe-moment-tags">
-              {{ range $tag := .Params.tags }}
-              <span class="pe-moment-tag">{{ $tag }}</span>
-              {{ end }}
-            </div>
-            {{ end }}
-          </div>
-          {{- end }}
-        </li>
-        {{ end }}
-      </ul>
+<article class="post-single">
+    <header class="page-header">
+        <h1>
+            {{- .Title }}
+        </h1>
+        {{- if .Description }}
+        <div class="post-description">
+            {{ .Description }}
+        </div>
+        {{- end }}
+    </header>
+
+    <div class="post-content">
+        <div class="pe-moments">
+            <ul>
+                {{ range $moment := $paginator.Pages }}
+                <li class="pe-moment">
+                    <div class="pe-moment-body">
+                        <h2>
+                            <a href="{{ $moment.RelPermalink }}">{{ $moment.Title }}</a>
+                        </h2>
+                        <div class="pe-moment-meta">
+                            <time>{{ $moment.Date.Format $dateformat }}</time>
+                            {{ if $moment.Params.tags }}
+                            <div class="pe-moment-tags">
+                                {{ range $moment.Params.tags }}
+                                <span class="pe-moment-tag">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                        </div>
+                        <div class="pe-moment-content">
+                            {{ $moment.Summary }}
+                        </div>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
     </div>
-  </div>
 </article>
 
 {{ if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
-  <nav class="pagination">
-    {{ if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">{{ i18n "prev_page" }}</a>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL | absURL }}">{{ i18n "next_page" }}</a>
-    {{ end }}
-  </nav>
+    <nav class="pagination">
+        {{ if $paginator.HasPrev }}
+        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+            &laquo; Previous
+        </a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+            Next &raquo;
+        </a>
+        {{ end }}
+    </nav>
 </footer>
 {{ end }}
+
 {{ end }}
