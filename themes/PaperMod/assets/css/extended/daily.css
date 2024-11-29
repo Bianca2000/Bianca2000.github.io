@@ -1,68 +1,80 @@
+/* 通用列表樣式 */
 .list {
-    background: #ffffff;
+    background: #ffffff; /* 設置背景色為白色 */
 }
 
+/* 頁面標題區域樣式 */
 .page-header {
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto 1rem; /* 使標題區域水平居中，並在底部添加1rem的間距 */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    align-items: center; /* 垂直居中對齊元素 */
+    justify-content: center; /* 水平居中對齊元素 */
 }
 
-.pe-moment {
-    padding: 1rem 0;
-    gap: .1rem;
-    align-items: flex-start;
-    display: flex;
-    border-bottom: 1px;
+/* 每個“daily”項目的樣式 */
+.pe-daily {
+    padding: 1rem 0; /* 上下內邊距為1rem */
+    gap: .1rem; /* 設置小間隔 (.1rem) 在 Flex 項目之間 */
+    align-items: flex-start; /* 項目對齊到容器的起始位置（上方） */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    border-bottom: 1px; /* 設置1px的底部邊框（顏色未指定） */
 }
 
-.pe-moments li {
-    border-bottom: 1px solid #d6d6d6;
+/* ".pe-dailys" 列表中的每一個項目 */
+.pe-dailys li {
+    border-bottom: 1px solid #d6d6d6; /* 設置每個列表項的底部邊框為淺灰色 */
 }
 
-.pe-moments img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: 0;
+/* ".pe-dailys" 內的圖片樣式 */
+.pe-dailys img {
+    width: 3rem; /* 設置圖片寬度為 3rem */
+    height: 3rem; /* 設置圖片高度為 3rem */
+    border-radius: 50%; /* 圓形圖片 */
+    margin: 0; /* 移除默認的外邊距 */
 }
 
-.pe-moments ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* ".pe-dailys ul" 的列表樣式重設 */
+.pe-dailys ul {
+    list-style: none; /* 移除默認的列表符號 */
+    margin: 0; /* 移除默認的外邊距 */
+    padding: 0; /* 移除默認的內邊距 */
 }
 
-.pe-moment-body {
-    margin-left: 1.5rem;
-    width: 100%;
-    overflow: hidden;
+/* 每個 daily 內容區域的樣式 */
+.pe-daily-body {
+    margin-left: 1.5rem; /* 在內容區左側添加1.5rem的間距 */
+    width: 100%; /* 設置內容區域的寬度為100% */
+    overflow: hidden; /* 隱藏任何溢出的內容 */
 }
 
-.pe-moment-content {
-    margin-bottom: 1.0rem;
+/* daily 內容區域的具體內容樣式 */
+.pe-daily-content {
+    margin-bottom: 1.0rem; /* 內容底部添加1rem的間距 */
 }
 
-.pe-moment-tag {
-    display: inline-block;
-    padding: 0.25em 0.6em;
-    font-size: 0.875em;
-    line-height: 0.8;
-    color: #999999; /* 暗色字体 */
-    background-color: #f0f0f0; /* 浅色背景 */
-    border-radius: 0.5rem;
+/* 標籤的樣式 */
+.pe-daily-tag {
+    display: inline-block; /* 標籤顯示為內聯塊元素 */
+    padding: 0.25em 0.6em; /* 標籤內部添加 0.25em 及 0.6em 的內邊距 */
+    font-size: 0.875em; /* 設置字體大小為 0.875em */
+    line-height: 0.8; /* 設置行高為0.8，緊湊的排版 */
+    color: #999999; /* 設置文字顏色為淺灰色 */
+    background-color: #f0f0f0; /* 設置背景顏色為淺灰色 */
+    border-radius: 0.5rem; /* 設置圓角邊框，半徑為 0.5rem */
 }
 
-.dark .pe-moment-tag {
-    background-color: #333; /* 暗色背景 */
+/* 暗色主題的標籤樣式 */
+.dark .pe-daily-tag {
+    background-color: #333; /* 在暗色模式下，標籤背景顏色設為深灰色 */
 }
 
-.pe-moment-time {
-    display: inline-block;
-    color: #999999;
+/* daily 時間顯示的樣式 */
+.pe-daily-time {
+    display: inline-block; /* 時間顯示為內聯塊元素 */
+    color: #999999; /* 設置時間文字顏色為淺灰色 */
 }
 
+/* 頁腳樣式 */
 .page-footer {
-    margin-top: 2rem;
+    margin-top: 2rem; /* 頁腳上方添加2rem的間距 */
 }
