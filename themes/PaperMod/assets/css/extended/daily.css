@@ -10,8 +10,8 @@
 }
 
 .pe-moment {
-    padding: 2rem 0;
-    gap: .8rem;
+    padding: 1rem 0;
+    gap: .1rem;
     align-items: flex-start;
     display: flex;
     border-bottom: 1px;
@@ -35,20 +35,20 @@
 }
 
 .pe-moment-body {
-    margin-left: 2.4rem;
+    margin-left: 1.5rem;
     width: 100%;
     overflow: hidden;
 }
 
 .pe-moment-content {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.0rem;
 }
 
 .pe-moment-tag {
     display: inline-block;
-    padding: 0.1em 0.4em;
-    font-size: 0.6em;
-    line-height: 1;
+    padding: 0.25em 0.6em;
+    font-size: 0.875em;
+    line-height: 0.8;
     color: #999999; /* 暗色字体 */
     background-color: #f0f0f0; /* 浅色背景 */
     border-radius: 0.5rem;
