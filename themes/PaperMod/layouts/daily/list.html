@@ -1,10 +1,12 @@
 {{- define "main" }}
 {{- $paginator := .Paginate .Pages }}
-{{ $dateformat := .Params.DateFormat | default "2006-01-02 15:04:05" }}
+{{ $dateformat := .Params.DateFormat }}
 
 <article class="post-single">
     <header class="page-header">
-        <h1>{{ .Title }}</h1>
+        <h1>
+            {{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+        </h1>
         {{- if .Description }}
         <div class="post-description">
             {{ .Description }}
@@ -18,17 +20,22 @@
                 {{- range $moment := $paginator.Pages }}
                 {{- if .Content }}
                 <li class="pe-moment">
+                    <img src="{{ site.Params.label.icon }}" alt="{{ site.Params.author }}">
                     <div class="pe-moment-body">
-                        <h2>{{ $moment.Title }}</h2>
-                        <div class="pe-moment-meta">
-                            <time>{{ $moment.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</time>
-                            {{- if $moment.Params.tags }}
-                            <div class="pe-moment-tags">
-                                {{- range $moment.Params.tags }}
-                                <span class="pe-moment-tag">{{ . }}</span>
-                                {{- end }}
-                            </div>
+                        <div class="pe-moment-content">
+                            {{ .Content }}
+                        </div>
+                        {{ if .Params.tags }}
+                        <div class="pe-moment-tags">
+                            {{- range $index, $tag := (.Params.tags) }}
+                            <span class="pe-moment-tag">{{ $tag }}</span>
                             {{- end }}
+                        </div>
+                        {{ end }}
+                        <div class="pe-moment-bottom">
+                            <div class="pe-moment-time">
+                                <span>{{ $moment.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</span>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -43,10 +50,20 @@
 <footer class="page-footer">
     <nav class="pagination">
         {{- if $paginator.HasPrev }}
-        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">&laquo; Previous</a>
+        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+            {{ i18n "prev_page" }}
+            {{- if (.Param "ShowPageNums") }}
+            {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
+            {{- end }}
+        </a>
         {{- end }}
         {{- if $paginator.HasNext }}
-        <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next &raquo;</a>
+        <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+            {{- i18n "next_page" }}
+            {{- if (.Param "ShowPageNums") }}
+            {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+            {{- end }}
+        </a>
         {{- end }}
     </nav>
 </footer>
