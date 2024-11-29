@@ -1,5 +1,14 @@
-/*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
-
-Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
-*/
+.post-content img {
+    margin: auto;
+}
+/* 文章&评论图片和代码块四角圆滑 */
+.post-single img,
+.post-content pre {
+    border-radius: 0.3em;
+}
+/* 文章超链接蓝底样式 */
+.post-content a:not(.anchor) {
+    box-shadow: none;
+    text-decoration: none;
+    background: linear-gradient(to bottom, transparent 70%, rgba(49,184,204,0.5) 70%);
+}
