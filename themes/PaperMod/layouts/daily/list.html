@@ -1,6 +1,6 @@
 {{- define "main" }}
 {{- $paginator := .Paginate .Pages }}
-{{ $dateformat := .Params.DateFormat }}
+{{ $dateformat := .Params.DateFormat | default "2006-01-02 15:04:05" }}
 
 <article class="post-single">
     <header class="page-header">
@@ -21,10 +21,12 @@
                 {{- if .Content }}
                 <li class="pe-moment">
                     <img src="{{ site.Params.label.icon }}" alt="{{ site.Params.author }}">
+
                     <div class="pe-moment-body">
                         <div class="pe-moment-content">
                             {{ .Content }}
                         </div>
+
                         {{ if .Params.tags }}
                         <div class="pe-moment-tags">
                             {{- range $index, $tag := (.Params.tags) }}
@@ -32,13 +34,16 @@
                             {{- end }}
                         </div>
                         {{ end }}
+
                         <div class="pe-moment-bottom">
                             <div class="pe-moment-time">
-                                <span>{{ $moment.Param "date" | time.Format (default site.Params.DateFormat $dateformat) }}</span>
+                                {{- $momentDate := .Param "date" | default .Date }} <!-- Use default .Date if "date" is not set -->
+                                <span>{{ $momentDate | time.Format $dateformat }}</span>
                             </div>
+
                             {{ if not .Params.hideComment }}
                             <button class="pe-moment-comment-btn" onclick="showComment(this)" data-slug="{{ $moment.Param "slug" }}">
-                               
+                                <!-- You can add comment icon or text here -->
                             </button>
                             {{ end }}
                         </div>
@@ -74,6 +79,5 @@
     </nav>
 </footer>
 {{- end }}
-
 
 {{- end }}{{/* end main */}}

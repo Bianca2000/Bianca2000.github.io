@@ -21,7 +21,7 @@ params:
   author: polarbear
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "2006-01-02 15:57:47"
+  DateFormat: "2006-01-02 15:04:05"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
   ShowCodeCopyButtons: true # 複製代碼
