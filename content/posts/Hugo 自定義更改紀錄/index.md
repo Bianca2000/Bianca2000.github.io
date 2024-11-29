@@ -9,6 +9,9 @@ draft: false
 
 - [ ] 更改字體
 
+- [x] 改了超連結的底線CSS
+  https://blog.yuk7.com/posts/papermod/
+
 - [ ] 更改行距
 
 - [ ] 大小標題臨近會感覺分不清

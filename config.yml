@@ -31,7 +31,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   
-# assets:
+ #assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
     #favicon: "<link / abs url>"
