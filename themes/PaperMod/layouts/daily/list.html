@@ -36,7 +36,11 @@
                         <div class="pe-moment-bottom">
                             <div class="pe-moment-time">
                                 {{- $momentDate := .Param "date" | default .Date }} <!-- 使用 default .Date，如果 "date" 沒有設定 -->
-                                <span>{{ $momentDate | time.Format $dateformat }}</span>
+                                {{- if $momentDate }}
+                                    <span>{{ $momentDate | time.Format $dateformat }}</span>
+                                {{- else }}
+                                    <span>未設置日期</span>
+                                {{- end }}
                             </div>
 
                             {{ if not .Params.hideComment }}
