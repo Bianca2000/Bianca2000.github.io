@@ -1,86 +1,80 @@
-:root {
-    --nav-width: 1380px;
-    --article-width: 650px;
-    --toc-width: 300px;
+/* 通用列表樣式 */
+.list {
+    background: #ffffff; /* 設置背景色為白色 */
 }
 
-.toc {
-    margin: 0 2px 40px 2px;
-    border: 1px solid var(--border);
-    background: var(--entry);
-    border-radius: var(--radius);
-    padding: 0.4em;
+/* 頁面標題區域樣式 */
+.page-header {
+    margin: 0 auto 1rem; /* 使標題區域水平居中，並在底部添加1rem的間距 */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    align-items: center; /* 垂直居中對齊元素 */
+    justify-content: center; /* 水平居中對齊元素 */
 }
 
-.toc-container.wide {
-    position: absolute;
-    height: 100%;
-    border-right: 1px solid var(--border);
-    left: calc((var(--toc-width) + var(--gap)) * -1);
-    top: calc(var(--gap) * 2);
-    width: var(--toc-width);
+/* 每個“moment”項目的樣式 */
+.pe-moment {
+    padding: 1rem 0; /* 上下內邊距為1rem */
+    gap: .1rem; /* 設置小間隔 (.1rem) 在 Flex 項目之間 */
+    align-items: flex-start; /* 項目對齊到容器的起始位置（上方） */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    border-bottom: 1px; /* 設置1px的底部邊框（顏色未指定） */
 }
 
-.wide .toc {
-    position: sticky;
-    top: var(--gap);
-    border: unset;
-    background: unset;
-    border-radius: unset;
-    width: 100%;
-    margin: 0 2px 40px 2px;
+/* ".pe-moments" 列表中的每一個項目 */
+.pe-moments li {
+    border-bottom: 1px solid #d6d6d6; /* 設置每個列表項的底部邊框為淺灰色 */
 }
 
-.toc details summary {
-    cursor: zoom-in;
-    margin-inline-start: 20px;
-    padding: 12px 0;
+/* ".pe-moments" 內的圖片樣式 */
+.pe-moments img {
+    width: 3rem; /* 設置圖片寬度為 3rem */
+    height: 3rem; /* 設置圖片高度為 3rem */
+    border-radius: 50%; /* 圓形圖片 */
+    margin: 0; /* 移除默認的外邊距 */
 }
 
-.toc details[open] summary {
-    font-weight: 500;
+/* ".pe-moments ul" 的列表樣式重設 */
+.pe-moments ul {
+    list-style: none; /* 移除默認的列表符號 */
+    margin: 0; /* 移除默認的外邊距 */
+    padding: 0; /* 移除默認的內邊距 */
 }
 
-.toc-container.wide .toc .inner {
-    margin: 0;
+/* 每個 moment 內容區域的樣式 */
+.pe-moment-body {
+    margin-left: 1.5rem; /* 在內容區左側添加1.5rem的間距 */
+    width: 100%; /* 設置內容區域的寬度為100% */
+    overflow: hidden; /* 隱藏任何溢出的內容 */
 }
 
-.active {
-    font-size: 110%;
-    font-weight: 600;
+/* moment 內容區域的具體內容樣式 */
+.pe-moment-content {
+    margin-bottom: 1.0rem; /* 內容底部添加1rem的間距 */
 }
 
-.toc ul {
-    list-style-type: circle;
+/* 標籤的樣式 */
+.pe-moment-tag {
+    display: inline-block; /* 標籤顯示為內聯塊元素 */
+    padding: 0.25em 0.6em; /* 標籤內部添加 0.25em 及 0.6em 的內邊距 */
+    font-size: 0.875em; /* 設置字體大小為 0.875em */
+    line-height: 0.8; /* 設置行高為0.8，緊湊的排版 */
+    color: #999999; /* 設置文字顏色為淺灰色 */
+    background-color: #f0f0f0; /* 設置背景顏色為淺灰色 */
+    border-radius: 0.5rem; /* 設置圓角邊框，半徑為 0.5rem */
 }
 
-.toc .inner {
-    margin: 0 0 0 20px;
-    padding: 0px 15px 15px 20px;
-    font-size: 16px;
-
-    /*目录显示高度*/
-    max-height: 83vh;
-    overflow-y: auto;
+/* 暗色主題的標籤樣式 */
+.dark .pe-moment-tag {
+    background-color: #333; /* 在暗色模式下，標籤背景顏色設為深灰色 */
 }
 
-.toc .inner::-webkit-scrollbar-thumb {  /*滚动条*/
-    background: var(--border);
-    border: 7px solid var(--theme);
-    border-radius: var(--radius);
+/* moment 時間顯示的樣式 */
+.pe-moment-time {
+    display: inline-block; /* 時間顯示為內聯塊元素 */
+    color: #999999; /* 設置時間文字顏色為淺灰色 */
 }
 
-.toc li ul {
-    margin-inline-start: calc(var(--gap) * 0.5);
-    list-style-type: none;
-}
-
-.toc li {
-    list-style: none;
-    font-size: 0.95rem;
-    padding-bottom: 5px;
-}
-
-.toc li a:hover {
-    color: var(--secondary);
+/* 頁腳樣式 */
+.page-footer {
+    margin-top: 2rem; /* 頁腳上方添加2rem的間距 */
 }
