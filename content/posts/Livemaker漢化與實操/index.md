@@ -21,7 +21,7 @@ pip install pylivemaker
 
 ## 解包Livemaker
 ### GARbro
-GARbro使用上非常簡單，你只需要把你把你資料夾底下最大的遊戲檔(ex:game.dat 或 game.exe)丟進去，就能看到一堆0000xxxlsb和是日文的...作成lsb
+GARbro使用上非常簡單，你只需要你把你資料夾底下最大的遊戲檔(ex:game.dat 或 game.exe)丟進去，就能看到一堆0000xxxlsb和是日文的...作成lsb
 
 ### Translator++
 一個能複合式拆包並能集成翻譯用途的軟件，但是要導入Livemaker的遊戲文件要另外下載T++的插件，點[選項-插件]就能下載了，然後再把你的exe or dat檔匯入加載，它會自動幫你分類解包好!
