@@ -81,7 +81,9 @@ lmlsb insertmenu --encoding=utf-8-sig 000000XX.lsb 000000XX.csv
 [M系鏡像搞出來的字體工具](https://github.com/shy2052/fontObfuscator)，但還不懂如何實操。
 這部分我踩的坑實在太太太多了，於是要特別說明：
 **如果你對字型完全不熟悉，那就別動任何字體！直接使用別人給的字體和字典來替換就夠了！別自作聰明！
+
 字體部分，我最後用了別人提供的【MS-Gothic.ttf】字體
+
 字典使用GalTransl_DumpInjector的
 但中間遇到非常多問題：**
 
