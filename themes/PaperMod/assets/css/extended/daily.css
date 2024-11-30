@@ -1,68 +1,86 @@
-.list {
-    background: #ffffff;
+:root {
+    --nav-width: 1380px;
+    --article-width: 650px;
+    --toc-width: 300px;
 }
 
-.page-header {
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.toc {
+    margin: 0 2px 40px 2px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 0.4em;
 }
 
-.pe-daily {
-    padding: 1rem 0;
-    gap: .1rem;
-    align-items: flex-start;
-    display: flex;
-    border-bottom: 1px;
+.toc-container.wide {
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    left: calc((var(--toc-width) + var(--gap)) * -1);
+    top: calc(var(--gap) * 2);
+    width: var(--toc-width);
 }
 
-.pe-dailys li {
-    border-bottom: 1px solid #d6d6d6;
-}
-
-.pe-dailys img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: 0;
-}
-
-.pe-dailys ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.pe-daily-body {
-    margin-left: 1.5rem;
+.wide .toc {
+    position: sticky;
+    top: var(--gap);
+    border: unset;
+    background: unset;
+    border-radius: unset;
     width: 100%;
-    overflow: hidden;
+    margin: 0 2px 40px 2px;
 }
 
-.pe-daily-content {
-    margin-bottom: 1.0rem;
+.toc details summary {
+    cursor: zoom-in;
+    margin-inline-start: 20px;
+    padding: 12px 0;
 }
 
-.pe-daily-tag {
-    display: inline-block;
-    padding: 0.25em 0.6em;
-    font-size: 0.875em;
-    line-height: 0.8;
-    color: #999999; /* 暗色字体 */
-    background-color: #f0f0f0; /* 浅色背景 */
-    border-radius: 0.5rem;
+.toc details[open] summary {
+    font-weight: 500;
 }
 
-.dark .pe-daily-tag {
-    background-color: #333; /* 暗色背景 */
+.toc-container.wide .toc .inner {
+    margin: 0;
 }
 
-.pe-daily-time {
-    display: inline-block;
-    color: #999999;
+.active {
+    font-size: 110%;
+    font-weight: 600;
 }
 
-.page-footer {
-    margin-top: 2rem;
+.toc ul {
+    list-style-type: circle;
+}
+
+.toc .inner {
+    margin: 0 0 0 20px;
+    padding: 0px 15px 15px 20px;
+    font-size: 16px;
+
+    /*目录显示高度*/
+    max-height: 83vh;
+    overflow-y: auto;
+}
+
+.toc .inner::-webkit-scrollbar-thumb {  /*滚动条*/
+    background: var(--border);
+    border: 7px solid var(--theme);
+    border-radius: var(--radius);
+}
+
+.toc li ul {
+    margin-inline-start: calc(var(--gap) * 0.5);
+    list-style-type: none;
+}
+
+.toc li {
+    list-style: none;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+}
+
+.toc li a:hover {
+    color: var(--secondary);
 }
