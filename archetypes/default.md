@@ -7,6 +7,7 @@ tags: ["first"]
 author: "polarbear"
 showToc: true
 TocOpen: true
+UseHugoToc: true
 hidemeta: false
 description: ""
 hideSummary: false
@@ -14,5 +15,4 @@ searchHidden: true
 ShowReadingTime: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
-UseHugoToc: true
 ---
