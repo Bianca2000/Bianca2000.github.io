@@ -9,7 +9,7 @@ draft: false
 author: polarbear
 showToc: true
 TocOpen: true
-description: ""
-categories:
+description: 
+categories: Obsidian
 ---
 ![[Pasted image 20241201120649.png]]
