@@ -14,6 +14,8 @@ minify:
   minifyOutput: true
 
 params:
+  
+  homePageSections: ["posts"]
   mainSections:
     - posts
   env: production # to enable google analytics, opengraph, twitter-cards and schema.

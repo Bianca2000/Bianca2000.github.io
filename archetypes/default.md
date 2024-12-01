@@ -1,9 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-tags: [{{VALUE:tag？}}]
-date: {{DATE:YYYY-MM-DD HH:mm:ss}}
-draft: false
 tags: ["first"]
+categories: ["post"]
+date: {{ .Date }}
+draft: false
 author: "polarbear"
 showToc: true
 TocOpen: true

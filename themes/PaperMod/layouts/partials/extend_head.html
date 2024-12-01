@@ -1,8 +1,10 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head>
-body {
-  font-family: LXGWWenKaiGB-Regular;
-}
+{{ range .Site.Pages }}
+  {{ if in .Params.homePageSections "posts" }}
+    {{ .Render "summary" }}
+  {{ end }}
+{{ end }}
 </head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
