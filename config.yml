@@ -12,7 +12,10 @@ defaultContentLanguage: zh_tw
 minify:
   disableXML: true
   minifyOutput: true
-
+  
+markup:
+  highlight:
+    style: paraiso-light
 params:
   
   homePageSections: ["posts"]
@@ -65,7 +68,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "撕咬的殘餘物"
-    Content: Just Nothing
+    Content: Incapable of creating anything of true worth.
 
 #   socialIcons:
 #     - name: github
