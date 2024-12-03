@@ -13,10 +13,12 @@ minify:
   disableXML: true
   minifyOutput: true
   
-
+markup:
+  highlight:
+    noClasses: false
+    style: paraiso-light
 
 params:
-  
   homePageSections: ["posts"]
   mainSections:
     - posts
