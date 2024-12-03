@@ -29,4 +29,7 @@ categories:
 
 - [ ] 試試看搞一個評論區
 
+- [x] 新增了引用的shortcode
+   https://www.sleepymoon.cyou/2023/hugo-shortcodes/
+
 - [ ] Google analytics

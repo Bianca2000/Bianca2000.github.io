@@ -15,7 +15,8 @@ minify:
   
 markup:
   highlight:
-    style: paraiso-light
+    style: solarized-light
+	
 params:
   
   homePageSections: ["posts"]
