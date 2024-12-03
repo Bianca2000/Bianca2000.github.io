@@ -14,18 +14,13 @@ body {
     "Source Han Sans CN", "Microsoft Yahei", sans-serif;
   font-size: 16px;
 }
-.post-content pre code , 
+.post-content pre code ,
 .post-content .highlight:not(table) ,
 .post-content .highlight table
  {
-    background: unset !important;
-    background-color: var(--code-bg) !important; /* support light/dark */
-    color: var(--secondary) !important; /* support light/dark */
+    background: #e7e9db !important;
+    color: unset !important;
 }
-.post-content img {
-  margin: auto;
-}
-
 .post-content pre {
     border-radius: 0.3em;
 }
