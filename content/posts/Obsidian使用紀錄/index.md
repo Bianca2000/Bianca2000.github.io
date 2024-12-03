@@ -33,3 +33,6 @@ draft: false
 ![[content/posts/Obsidian使用紀錄/imgae/Pasted image 20241203170709.png]]
 ## 其他雜七雜八的Ob整理
 - 在MD檔案上長按ctrl可以看到縮圖 
+
+```javascript
+function greet(name) { console.log(`Hello, ${name}!`); }

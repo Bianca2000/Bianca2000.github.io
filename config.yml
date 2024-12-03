@@ -13,9 +13,7 @@ minify:
   disableXML: true
   minifyOutput: true
   
-markup:
-  highlight:
-    style: paraiso-light
+
 
 params:
   

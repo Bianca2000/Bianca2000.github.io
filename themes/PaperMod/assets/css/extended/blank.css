@@ -7,6 +7,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 pre,
 code {
   font-family: "Cascadia Code", "LXGW WenKai Screen", monospace;
+  background-color: var(--hljs-bg); /* 使用 CSS 變量設置背景色 */
+}
+
+:root {
+  --hljs-bg: #e7e9db; /* 默認的背景色 */
+}
+
+.dark {
+  --hljs-bg: #272b33; /* 黑暗模式下的背景色 */
 }
 
 body {
@@ -19,9 +28,4 @@ body {
   margin: auto;
 }
 
-:root {
-  --hljs-bg: #22272e;
-}
-.dark {
-  --hljs-bg: #22272e;
-}
+
