@@ -4,6 +4,8 @@
 {{- $paginator := .Paginate .Pages }} <!-- 初始化分頁器 -->
 {{ $dateformat := .Params.DateFormat }} <!-- 設置日期格式變量 -->
 
+{{ printf "Paginator: %+v" $paginator | safeHTML }}
+
 <!-- 文章單一內容區塊 -->
 <article class="post-single"> 
     <!-- 文章頭部 -->
@@ -65,27 +67,19 @@
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
     <nav class="pagination">
-        <!-- 如果有上一頁，顯示上一頁鏈接 -->
-        {{- if $paginator.HasPrev }}
-        <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-            {{ i18n "prev_page" }}
-            <!-- 如果需要顯示頁碼，顯示當前頁/總頁數 -->
-            {{- if (.Param "ShowPageNums") }}
-            {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
-            {{- end }}
-        </a>
-        {{- end }}
-        <!-- 如果有下一頁，顯示下一頁鏈接 -->
-        {{- if $paginator.HasNext }}
-        <a class="next" href="{{ $paginator.Next.URL | absURL }}">
-            {{- i18n "next_page" }}
-            <!-- 如果需要顯示頁碼，顯示當前頁/總頁數 -->
-            {{- if (.Param "ShowPageNums") }}
-            {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
-            {{- end }}
-        </a>
-        {{- end }}
-    </nav>
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">← 上一頁</a>
+    {{- end }}
+
+    {{- range $i, $page := $paginator.Pages }}
+    <a href="{{ $page.Permalink }}">{{ add $i 1 }}</a>
+    {{- end }}
+
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">下一頁 →</a>
+    {{- end }}
+</nav>
+
 </footer>
 {{- end }}
 

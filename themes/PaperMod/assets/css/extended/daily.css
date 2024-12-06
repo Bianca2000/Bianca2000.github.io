@@ -87,3 +87,33 @@
         padding: 8px 12px;
     }
 }
+.pagination {
+    display: flex; /* 使用 Flexbox 對齊 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 0.5rem; /* 按鈕之間的間距 */
+    margin: 1.5rem 0; /* 與其他內容區分開 */
+}
+
+.pagination a {
+    display: inline-block;
+    min-width: 2rem; /* 按鈕最小寬度 */
+    padding: 0.5rem 1rem;
+    text-align: center; /* 居中對齊 */
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+.pagination .prev, .pagination .next {
+    font-weight: bold;
+}
+
