@@ -87,33 +87,30 @@
         padding: 8px 12px;
     }
 }
+
+
 .pagination {
-    display: flex; /* 使用 Flexbox 對齊 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    /*position: fixed;  固定在視窗位置 */
+    bottom: 1rem; /* 距離底部 1rem */
+    right: 1rem; /* 距離右側 1rem */
+    display: flex; /* 使用 Flexbox */
     gap: 0.5rem; /* 按鈕之間的間距 */
-    margin: 1.5rem 0; /* 與其他內容區分開 */
 }
 
 .pagination a {
     display: inline-block;
-    min-width: 2rem; /* 按鈕最小寬度 */
-    padding: 0.5rem 1rem;
-    text-align: center; /* 居中對齊 */
-    background-color: #f8f9fa;
-    color: #007bff;
-    text-decoration: none;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: all 0.3s ease;
+    padding: 0.3rem 0.8rem; /* 減小按鈕內邊距，讓按鈕更扁平 */
+    font-size: 0.875rem; /* 字體大小調整為 0.875rem */
+    background-color: #000; /* 黑色背景 */
+    color: #fff; /* 白色文字 */
+    text-decoration: none; /* 移除下劃線 */
+    border: 2px solid transparent; /* 移除邊框 */
+    border-radius: 1rem; /* 完全圓角 */
+    transition: all 0.3s ease; /* 平滑過渡效果 */
 }
-
 .pagination a:hover {
-    background-color: #e9ecef;
-    color: #0056b3;
+    background-color: #e26c56; /* 懸停時背景設為橘紅色 */
+    color: #fff; /* 文字仍為白色 */
 }
 
-.pagination .prev, .pagination .next {
-    font-weight: bold;
-}
 
