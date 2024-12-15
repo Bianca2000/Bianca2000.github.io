@@ -29,3 +29,18 @@ UseHugoToc: true
 就是能在本地看lofter而不是用RSS閱讀器直接提取網頁框架
 
 ## 匯入Obsidian
+
+### 下載[obsidian-rss-copyist](https://github.com/aoout/obsidian-rss-copyist)
+
+這個插件的作者真是我的心靈摯友，不用造輪子就能免費用，真的是非常美好的事情。
+進入項目介紹，其實都寫得很清楚，操作如下：
+
+- Obsidian裡面新建一個放rss的資料夾，我命名為rss
+- 在rss下新建兩個.md，一個一定要叫template，另一個放你的rss連結、可以叫合集名稱
+  > 血的教訓，我之前把 template 亂命名，就不能運作
+  > ![Pasted%20image%2020241215210408.png](image/Pasted%20image%2020241215210408.png)
+- ctrl+P找到rss的命令行`Get the newest articles from all feeds`就能運作了
+
+*如此就能快速把文章下載成md，對本地儲存強迫症不要太好了。*
+
+![Pasted%20image%2020241215210840.png](image/Pasted%20image%2020241215210840.png)

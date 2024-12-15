@@ -9,10 +9,9 @@ draft: false
 
 這方面感覺已經有很多博主寫過類似的文章了
 比如
--  [obsidian 配合 hugo、cloudflare：让发布博客简单到不可思议](https://lillianwho.com/posts/obsidian-hugo-cloudflare/)
+-  [obsidian 配合 hugo、cloudflare：让发布博客简单到不可思议](https://lillianwho.com/posts/obsidian-hugo-cloudflare/)  
 	使用了Quickadd配合temple快速生成
-- [Obsidian + Github + Hugo 一站式笔记发布工作流](https://mlosun.com/blog/obsidian-github-hugo/)
-
+- [Obsidian + Github + Hugo 一站式笔记发布工作流](https://mlosun.com/blog/obsidian-github-hugo/)  
 	這個是用[Enveloppe](https://github.com/Enveloppe/obsidian-enveloppe)
 然後透過git插件來自定義快捷鍵上傳或是自己寫一個bat快速上傳就可以了
 記得在上傳前把.Obsidian資料夾加入.gitignore
@@ -31,7 +30,8 @@ date:
 draft: false
 ---
 ```
-![Pasted image 20241203170709](./image/Pasted image 20241203170709.png)
+
+![Pasted image 20241203170709](image/Pasted%20image%2020241203170709.png)
 
 ## 其他雜七雜八的Ob整理
 
