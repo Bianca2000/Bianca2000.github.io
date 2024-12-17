@@ -14,13 +14,10 @@ minify:
   minifyOutput: true
   
 params:
-  homePageSections: ["posts"]
-  mainSections:
-    - posts
+  mainSections: posts
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Polar Bear Cave
   description: "Nothing at all."
-  keywords: [Blog, PaperMod]
   author: polarbear
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -31,8 +28,6 @@ params:
   showtoc: true # 目錄
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
-  
-  markup:
   goldmark:
     renderer:
       hardWraps: true
